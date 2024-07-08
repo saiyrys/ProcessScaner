@@ -1,0 +1,26 @@
+﻿<Page x:Class="ProcessScanner.CPUPage.CpuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProcessScanner.CPUPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="900"
+      Title="CpuPage">
+
+    <Grid>
+        <Grid Name="GpuCircle">
+            <TextBlock Text="Загруженность Процессора" Foreground="White" Margin="330,50,320,0" FontSize="18" VerticalAlignment="Top" />
+
+            <Ellipse Width="200" Height="200" StrokeThickness="2" Margin="0,0,0,70" Stroke="#444444"/>
+
+            <TextBlock x:Name="cpuUsages" TextAlignment="Center" FontSize="20" Foreground="White" Margin="10,200,0,0" FontStyle="Italic" Panel.ZIndex="1"/>
+
+            <Ellipse x:Name="ellipseСPU" Width="194.5" Height="194.5" StrokeThickness="0" Margin="0,0,0,70">
+                <Ellipse.Fill>
+                    <SolidColorBrush x:Name="ellipseFillBrush" Color="Transparent"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Grid>
+    </Grid>
+</Page>

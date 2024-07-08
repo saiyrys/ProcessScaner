@@ -1,0 +1,22 @@
+﻿<Window x:Class="ProcessScanner.Services.Scanner.SelectSettingScanner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProcessScanner.Services.Scanner"
+        mc:Ignorable="d"
+        Title="SelectSettingScanner" Height="450" Width="400" Background="#161a1e">
+    <Grid>
+
+        <StackPanel>
+            <CheckBox Name="cpuCheckBox" Content="Сканировать процессор" Margin="5" Foreground="White" Height="30" VerticalContentAlignment="Center"/>
+            <CheckBox Name="gpuCheckBox" Content="Сканировать видеокарту" Margin="5" Foreground="White" Height="30" VerticalContentAlignment="Center"/>
+            <CheckBox Name="ramCheckBox" Content="Сканировать RAM" Margin="5" Foreground="White" Height="30" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <Grid Margin="0,0,0,-20" >
+        <Button Content="Начать сканирование" Click="StartScanning_Click" Height="40" Margin="20,350,200,40"/>
+        <Button Content="Выборочное сканирование" Click="SelectFolder_Click" Height="40" Margin="200,350,20,40"/>
+        </Grid>
+    </Grid>
+</Window>

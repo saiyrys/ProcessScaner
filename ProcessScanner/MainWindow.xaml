@@ -1,0 +1,30 @@
+﻿<Window x:Class="ProcessScanner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProcessScanner"
+        mc:Ignorable="d"
+       Title="Сканнер" Height="550" MaxWidth="900" Background="#161a1e">
+    <Grid>
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top" Background="#161a1e" Foreground="White" Width="900" >
+            <MenuItem Header=" _О программе ">
+                <MenuItem Header="Версия 1.0.1" Foreground="Black" />
+                <MenuItem Header="Руководство пользоватедя" Foreground="Black" Click="user_Manual"/>
+            </MenuItem>
+            <MenuItem Header=" _Отчет ">
+                <MenuItem Header="HTML" Foreground="Black" Click="HTMLReport"/>
+            </MenuItem >
+            <MenuItem Header=" _Сервис ">
+                <MenuItem Header="Показать нагруженность процессора" Foreground="Black" Click="CPU"/>
+                <MenuItem Header="Показать нагруженность Видеокарты" Foreground="Black" Click="GPU"/>
+                <MenuItem Header="Показать нагруженность оперативной памяти" Foreground="Black" Click="RAM"/>
+            </MenuItem >
+        </Menu>
+        <Frame Name="mainFrame" NavigationUIVisibility="Hidden"/>
+        <StackPanel Name="Buttons" >
+            <Button x:Name="Scanner" Content="🔍 Начать сканирование" Click="Start_Scann" 
+         Margin="25,375,470,0" Width="200" Height="60" Panel.ZIndex="1"/>
+        </StackPanel>
+    </Grid>
+</Window>
